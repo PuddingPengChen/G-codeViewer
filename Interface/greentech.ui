@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GreenTech</class>
+ <widget class="QMainWindow" name="GreenTech">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	background-color: rgb(244, 244, 244);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">QFrame
+{
+	border-radius:10px;
+	
+	background-color:rgba(114, 112, 127, 115);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="Graph" name="graphicsView">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">Graph{
+	background-color: rgb(244, 244, 244);
+	border-radius:10px;
+
+}</string>
+         </property>
+         <property name="viewportUpdateMode">
+          <enum>QGraphicsView::FullViewportUpdate</enum>
+         </property>
+         <property name="rubberBandSelectionMode">
+          <enum>Qt::IntersectsItemShape</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QFrame" name="frame">
+         <property name="minimumSize">
+          <size>
+           <width>211</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>211</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame
+{
+	border-radius:10px;
+	background-color:  rgb(110, 119, 127);
+}
+QPushButton
+{
+	color:rgb(255,255,255);
+	background-color: rgb(85, 85, 85);
+	border-radius:4px;
+}
+QPushButton:hover
+{
+     background-color: rgb(110, 115, 110);
+}
+QPushButton:pressed 
+{
+     background-color: rgb(22, 22, 22);     
+}
+
+
+
+QDoubleSpnBox
+{
+	color:rgb(255,255,255);
+	background-color: rgb(65, 65, 65);
+	border-radius:4px;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="Slice">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>58</x>
+            <y>191</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>切片</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="Print">
+          <property name="geometry">
+           <rect>
+            <x>58</x>
+            <y>71</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>打印</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="geometry">
+           <rect>
+            <x>58</x>
+            <y>151</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>暂停</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="Cancle">
+          <property name="geometry">
+           <rect>
+            <x>58</x>
+            <y>111</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>取消</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="loadfle">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>装载</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="remove">
+          <property name="geometry">
+           <rect>
+            <x>112</x>
+            <y>20</y>
+            <width>75</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>删除</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>817</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave_2"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionSelect"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove"/>
+    <addaction name="actionScale"/>
+    <addaction name="actionRotate"/>
+    <addaction name="actionReset_Rotate"/>
+    <addaction name="separator"/>
+    <addaction name="actionSnap"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionOrtho"/>
+    <addaction name="actionPerspective"/>
+    <addaction name="separator"/>
+    <addaction name="actionTopView"/>
+    <addaction name="actionBottomView"/>
+    <addaction name="actionRightView"/>
+    <addaction name="actionLeftView"/>
+    <addaction name="actionFrontView"/>
+    <addaction name="actionBackView"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="viewToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="supportEdit">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionBack_View">
+   <property name="text">
+    <string>Back_View</string>
+   </property>
+   <property name="toolTip">
+    <string>OutSupportMode</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionAuto_Support">
+   <property name="text">
+    <string>Auto_Support</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionDeleteSupport">
+   <property name="text">
+    <string>DeleteSupport</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionManuAddSupport">
+   <property name="text">
+    <string>ManuAddSupport</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionAddBasePlate">
+   <property name="text">
+    <string>AddBasePlate</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionLight_support">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Light_support</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionMedium_support">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Medium_support</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionHeavy_support">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Heavy_support</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionQuit_Pudding">
+   <property name="text">
+    <string>Quit Pudding</string>
+   </property>
+  </action>
+  <action name="actionSave_2">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="text">
+    <string>Move</string>
+   </property>
+  </action>
+  <action name="actionScale">
+   <property name="text">
+    <string>Scale</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="text">
+    <string>Rotate</string>
+   </property>
+  </action>
+  <action name="actionReset_Rotate">
+   <property name="text">
+    <string>Reset Rotate</string>
+   </property>
+  </action>
+  <action name="actionSelect">
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionSnap">
+   <property name="text">
+    <string>Snap floor</string>
+   </property>
+  </action>
+  <action name="actionOrtho">
+   <property name="text">
+    <string>Ortho</string>
+   </property>
+  </action>
+  <action name="actionPerspective">
+   <property name="text">
+    <string>Perspective</string>
+   </property>
+  </action>
+  <action name="actionTopView">
+   <property name="text">
+    <string>TopView</string>
+   </property>
+  </action>
+  <action name="actionBottomView">
+   <property name="text">
+    <string>BottomView</string>
+   </property>
+  </action>
+  <action name="actionRightView">
+   <property name="text">
+    <string>RightView</string>
+   </property>
+  </action>
+  <action name="actionLeftView">
+   <property name="text">
+    <string>LeftView</string>
+   </property>
+  </action>
+  <action name="actionFrontView">
+   <property name="text">
+    <string>FrontView</string>
+   </property>
+  </action>
+  <action name="actionBackView">
+   <property name="text">
+    <string>BackView</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="text">
+    <string>Auto</string>
+   </property>
+  </action>
+  <action name="actionManuDelete">
+   <property name="text">
+    <string>ManuDelete</string>
+   </property>
+  </action>
+  <action name="actionLight">
+   <property name="text">
+    <string>Light</string>
+   </property>
+  </action>
+  <action name="actionMid">
+   <property name="text">
+    <string>Medium</string>
+   </property>
+  </action>
+  <action name="actionHeavy">
+   <property name="text">
+    <string>Heavy</string>
+   </property>
+  </action>
+  <action name="actionDeleteAll">
+   <property name="text">
+    <string>DeleteAll</string>
+   </property>
+  </action>
+  <action name="actionRemoveAll">
+   <property name="text">
+    <string>RemoveAll</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove all support struct</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Andalus</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Graph</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">graph.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
